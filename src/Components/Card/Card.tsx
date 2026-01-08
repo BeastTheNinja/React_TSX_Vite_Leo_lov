@@ -1,17 +1,17 @@
- interface CardProps {
-        title: string;
-        description: string;
-    }
+interface CardProps {
+    title: string;
+    description: string;
+}
 
-    
+
 export const Card = ({ title, description }: CardProps) => {
-   
+
     return (
-        <section className="relative rounded-lg bg-gray-100">
-            <div className="w-64 h-40 bg-white shadow-md rounded-lg p-4">
-                <h2 className="text-xl font-bold mb-2">{title}</h2>
-                <p className="text-gray-600">{description}</p>
-            </div>
-        </section>
+
+        <div className="relative w-64 h-96 bg-neutral-50 rounded-lg shadow-[0px_0px_6px_1px_rgba(0,0,0,0.25)]">
+            <h2 className="w-64 h-20 text-center justify-start text-blue-800 text-3xl font-normal font-['Jura']">{title}</h2>
+            <p className="w-52 h-36  text-center justify-start text-black text-base font-normal font-['Inter']">{description}</p>
+        </div>
+
     )
 }
