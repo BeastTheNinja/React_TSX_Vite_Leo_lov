@@ -1,73 +1,141 @@
-# React + TypeScript + Vite
+# Leo-Lov Advokatfirma Hjemmeside
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📋 Projektbeskrivelse
 
-Currently, two official plugins are available:
+Dette projekt er en responsiv one-page hjemmeside udviklet til advokatfirmaet Leo-Lov.  Hjemmesiden er bygget med React, TypeScript og Vite, og følger et præcist design udleveret af kunden.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎯 Opgavens Formål
 
-## React Compiler
+Projektet er udviklet som en skoleopgave med fokus på:
+- Implementering af et præcist design i React
+- Responsive komponenter der fungerer på mobil, tablet og desktop
+- Moderne React-udvikling med TypeScript (. tsx filformat)
+- Component-baseret arkitektur
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Funktionaliteter
 
-## Expanding the ESLint configuration
+### Krav (Implementeret)
+- ✅ **Design-trofast implementering** - Siden følger det udleverede Figma design
+- ✅ **Funktionel navigation** - Alle links fører til korrekte sektioner på siden
+- ✅ **Responsive design** - Fungerer optimalt på mobil, tablet og desktop
+- ✅ **Sticky navigation** - Navigationsbar forbliver synlig ved scroll
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Bonus Features
+- 🗺️ **Interaktiv Google Maps** - Implementeret i stedet for statisk lokationsbillede
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠️ Teknologier
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **React 18** - UI framework
+- **TypeScript** - Type-safety og bedre developer experience
+- **Vite** - Hurtig build tool og development server
+- **ESLint** - Code linting og quality assurance
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🚀 Installation og Opsætning
+
+### Forudsætninger
+- Node.js (version 16 eller højere)
+- npm eller yarn
+
+### Installation
+```bash
+# Klon repository
+git clone https://github.com/BeastTheNinja/React_TSX_Vite_Leo_lov.git
+
+# Naviger til projekt-mappen
+cd React_TSX_Vite_Leo_lov
+
+# Installer dependencies
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Kør Development Server
+```bash
+npm run dev
 ```
+Åbn [http://localhost:5173](http://localhost:5173) i din browser. 
+
+### Build til Production
+```bash
+npm run build
+```
+
+### Preview Production Build
+```bash
+npm run preview
+```
+
+## 📁 Projektstruktur
+
+```
+React_TSX_Vite_Leo_lov/
+├── src/
+│   ├── components/      # React komponenter
+│   ├── assets/          # Billeder, ikoner, fonts
+│   ├── styles/          # CSS/SCSS filer
+│   ├── App.tsx          # Hoved App komponent
+│   └── main.tsx         # Entry point
+├── public/              # Statiske filer
+├── index.html
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+```
+
+## 🎨 Design
+
+- **Figma Design**:  [Link til Figma](https://www.figma.com/design/6J0w4fSB0SAfk06sHvhC0M/Leo-Lov? node-id=0-1&t=K6wWWxoaTrsCgCej-1)
+- **PDF Specifikation**: LeoLov. pdf
+
+## 📱 Responsive Breakpoints
+
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
+
+## 🧩 Hovedkomponenter
+
+- **Header/Navigation** - Sticky navigation med smooth scroll
+- **Hero Section** - Forside præsentation
+- **Om Os** - Information om firmaet
+- **Ydelser** - Oversigt over advokatydelser
+- **Team** - Præsentation af advokater
+- **Kontakt** - Kontaktinformation med Google Maps integration
+- **Footer** - Links og juridisk information
+
+## 📝 Kodestandarder
+
+Projektet følger TypeScript best practices og React conventions:
+- Funktionelle komponenter med hooks
+- Type-safe props interfaces
+- Konsistent komponent-struktur
+- Semantisk HTML
+- Tilgængelighed (a11y) considerations
+
+## 🔧 Scripts
+
+```json
+{
+  "dev": "vite",                    // Start development server
+  "build": "tsc -b && vite build",  // Build til production
+  "lint": "eslint .",               // Kør linting
+  "preview": "vite preview"         // Preview production build
+}
+```
+
+## 📄 Licens
+
+Dette projekt er licenseret under MIT License - se [LICENSE](LICENSE) filen for detaljer.
+
+## 👨‍💻 Forfatter
+
+**BeastTheNinja**
+- GitHub: [@BeastTheNinja](https://github.com/BeastTheNinja)
+
+## 🙏 Anerkendelser
+
+- Leo-Lov advokatfirma for design og opgavespecifikationer
+- Skolen for projektvejledning
+
+---
+
+**Aflevering**:  Dette projekt er afleveret som en del af React/TypeScript kursus med fokus på responsive design og komponent-arkitektur. 
