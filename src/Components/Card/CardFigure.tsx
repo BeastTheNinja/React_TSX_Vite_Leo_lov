@@ -12,6 +12,7 @@ export const CardFigure = ({
     reverse = false,
 }: CardFigureProps) => {
     return (
+
         <figure
             className={`
         flex flex-col md:flex-row md:items-stretch
@@ -55,5 +56,6 @@ export const CardFigure = ({
                 </p>
             </figcaption>
         </figure>
+
     )
 }
