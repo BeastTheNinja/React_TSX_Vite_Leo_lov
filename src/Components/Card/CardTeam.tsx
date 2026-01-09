@@ -4,6 +4,7 @@ interface CardTeamProps {
     alt: string;
     name: string;
     description: string;
+    
 }
 
 export const CardTeam = ({ src, alt, name, description }: CardTeamProps) => {

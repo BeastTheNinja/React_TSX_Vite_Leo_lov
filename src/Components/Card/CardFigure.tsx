@@ -3,6 +3,7 @@ interface CardFigureProps {
     description: string
     imageUrl: string
     reverse?: boolean
+    Address?: string;
 }
 
 export const CardFigure = ({
@@ -10,6 +11,7 @@ export const CardFigure = ({
     description,
     imageUrl,
     reverse = false,
+    Address
 }: CardFigureProps) => {
     return (
 
@@ -54,6 +56,7 @@ export const CardFigure = ({
                 <p className="max-w-prose text-base text-black font-['Inter']">
                     {description}
                 </p>
+                <address className="w-80 h-7 justify-start text-indigo-900 text-base font-normal font-['Jura']">{Address}</address>
             </figcaption>
         </figure>
 

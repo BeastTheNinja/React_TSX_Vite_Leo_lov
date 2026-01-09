@@ -6,11 +6,9 @@ export const SectionMapFigure = () => {
         <section className="flex flex-col md:flex-row justify-center relative mb-20 mt-10">
             <CardFigure
                 title="HER BOR VI"
-                description="Vi har valgt at bosætte os i solen! Her er dejlig varmt og ikke ret mange fattige mennesker. Det nyder vi rigtig meget. “Hvis du har råd til at tage til Sechellerne har du råd til os”. Det er et af vores utallige motto´er."
+                description="Vi har valgt at bosætte os i solen! Her er dejlig varmt og ikke ret mange fattige mennesker. Det nyder vi rigtig meget. “Hvis du har råd til at tage til Sechellerne har du råd til os”. Det er et af vores utallige motto´er." Address="Leo-Lov ApS Maldive rd. 22 Seychelles"
                 imageUrl={map}
-            >
-               
-            </CardFigure>
+            />
         </section>
     )
 }
