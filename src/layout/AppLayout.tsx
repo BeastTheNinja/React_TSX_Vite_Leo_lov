@@ -3,7 +3,7 @@ import { Footer } from "../Components/Footer/Footer"
 import { Header } from "../Components/Header/Header"
 import { Hero } from "../Components/HeroSection/Hero"
 
-export const AppView = () => {
+export const AppLayout = () => {
     return (
         <div className="w-full mx-auto overflow-x-hidden">
             <Header />          {/* Vises ØVERST på alle sider */}
