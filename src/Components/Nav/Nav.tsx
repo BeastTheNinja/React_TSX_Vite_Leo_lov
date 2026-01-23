@@ -1,19 +1,29 @@
-import { Link } from 'react-router';
+import { NavLink } from 'react-router-dom';
 import '../../styles/GlobalFont.css';
 
 export const Nav = () => {
-  const Links = ['Hjem', 'Advokaterne', 'Om LeoLov', 'Kontakt'];
+  const links = [
+    { label: 'Hjem', to: '/' },
+    { label: 'Advokaterne', to: '/advokaterne' },
+    { label: 'Om LeoLov', to: '/om-leolov' },
+    { label: 'Kontakt', to: '/kontakt' },
+  ];
 
   return (
     <nav className="w-full h-14 absolute bg-neutral-50 shadow-md">
       <ul className="flex h-full items-center divide-x divide-blue-800">
-        {Links.map((link) => (
-          <li key={link} className="px-2 relative left-10">
-            <Link to={`/${link.toLowerCase().replace(/ /g, '-')}`}
-              className="text-blue-800 text-xs font-normal font-inter"
+        {links.map((link) => (
+          <li key={link.to} className="px-2 relative left-10">
+            <NavLink
+              to={link.to}
+              className={({ isActive }) =>
+                `text-xs font-normal font-inter ${isActive ? 'text-blue-900 font-semibold underline' : 'text-blue-800'
+                }`
+              }
+              end={link.to === '/'}
             >
-              {link}
-            </Link>
+              {link.label}
+            </NavLink>
           </li>
         ))}
       </ul>

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 import { AppLayout } from "../layout/AppLayout"
 import { AboutView } from "../pages/AboutPageView"
 import { AdvokatView } from "../pages/AdvokatPageView"
@@ -11,7 +11,7 @@ export const RoutesComponent = () => {
         <BrowserRouter>
             <Routes>
                 <Route element={<AppLayout />}>
-                    <Route path="/" element={<HomeView />} />
+                    <Route index element={<HomeView />} />
                     <Route path="/hjem" element={<HomeView />} />
                     <Route path="/advokaterne" element={<AdvokatView />} />
                     <Route path="/om-leolov" element={<AboutView />} />
