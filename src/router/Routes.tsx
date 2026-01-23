@@ -12,7 +12,6 @@ export const RoutesComponent = () => {
             <Routes>
                 <Route element={<AppLayout />}>
                     <Route index element={<HomeView />} />
-                    <Route path="/hjem" element={<HomeView />} />
                     <Route path="/advokaterne" element={<AdvokatView />} />
                     <Route path="/om-leolov" element={<AboutView />} />
                     <Route path="/kontakt" element={<ContactUs />} />

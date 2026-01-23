@@ -7,11 +7,8 @@ export const AppLayout = () => {
     return (
         <div className="w-full mx-auto overflow-x-hidden">
             <Header />          {/* Vises ØVERST på alle sider */}
-
             <Hero />          {/* Vises under header på alle sider */}
-
             <Outlet />        {/* Her kommer sidens indhold */}
-
             <Footer />        {/* Vises NEDERST på alle sider */}
         </div>
     )
