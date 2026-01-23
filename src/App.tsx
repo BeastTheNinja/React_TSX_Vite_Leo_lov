@@ -2,6 +2,9 @@ import { BrowserRouter, Route, Routes } from "react-router"
 import { HomeView } from "./pages/HomePageView"
 import { NotFoundView } from "./pages/NotFoundView"
 import { AppView } from "./layout/AppLayout"
+import { ContactUs } from "./pages/ContactUsPageView"
+import { AboutView } from "./pages/AboutPageView"
+import { AdvokatView } from "./pages/AdvokatPageView"
 
 function App() {
   return (
@@ -10,9 +13,9 @@ function App() {
         <Route element={<AppView />}>
           <Route path="/" element={<HomeView />} />
           <Route path="/hjem" element={<HomeView />} />
-          <Route path="/advokaterne" element={<HomeView />} />
-          <Route path="/om-leolov" element={<HomeView />} />
-          <Route path="/kontakt" element={<HomeView />} />
+          <Route path="/advokaterne" element={<AdvokatView />} />
+          <Route path="/om-leolov" element={<AboutView />} />
+          <Route path="/kontakt" element={<ContactUs />} />
           <Route path="*" element={<NotFoundView />} />
         </Route>
       </Routes>
