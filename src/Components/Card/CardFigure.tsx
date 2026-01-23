@@ -1,3 +1,5 @@
+import '../../styles/GlobalFont.css'
+
 interface CardFigureProps {
     title: string
     description: string

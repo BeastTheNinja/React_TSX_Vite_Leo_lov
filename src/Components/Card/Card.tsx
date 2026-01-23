@@ -1,3 +1,4 @@
+import '../../styles/GlobalFont.css'
 interface CardProps {
     title: string;
     description: string;
