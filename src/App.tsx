@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router"
-import { AppView } from "./pages/AppView"
 import { HomeView } from "./pages/HomePageView"
 import { NotFoundView } from "./pages/NotFoundView"
+import { AppView } from "./layout/AppLayout"
 
 function App() {
   return (
