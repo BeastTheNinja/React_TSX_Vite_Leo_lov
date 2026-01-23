@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import '../../styles/GlobalFont.css';
 
 export const Nav = () => {
@@ -8,12 +9,11 @@ export const Nav = () => {
       <ul className="flex h-full items-center divide-x divide-blue-800">
         {Links.map((link) => (
           <li key={link} className="px-2 relative left-10">
-            <a
-              href={`#${link.toLowerCase()}`}
+            <Link to={`/${link.toLowerCase().replace(/ /g, '-')}`}
               className="text-blue-800 text-xs font-normal font-inter"
             >
               {link}
-            </a>
+            </Link>
           </li>
         ))}
       </ul>
